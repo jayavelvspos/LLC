@@ -32,6 +32,21 @@ least one alert. Stage 6 deliverable.
     dodges request-timeout limits.
   - `GET /healthz` — liveness; `GET /readyz` — checks the model API and vector
     store.
+- **LangServe** — if the app is an LCEL/LangGraph runnable, `add_routes(app,
+  chain)` gives you `/invoke`, `/batch`, `/stream`, and `/stream_events` (SSE)
+  plus a schema and a playground for free. Use it when the runnable *is* the
+  API; hand-write FastAPI routes when you need custom endpoints, auth, or
+  queueing logic.
+- **Packaging** — a `Dockerfile` (slim Python base, `pip install -r
+  requirements.txt`, non-root user, `uvicorn` entrypoint) so the same image runs
+  locally and in any cloud. `docker compose` to bring up the service + Qdrant +
+  Phoenix together.
+- **Where it runs** — a container platform on any cloud: **AWS** (ECS/Fargate,
+  App Runner, EKS), **GCP** (Cloud Run, GKE), **Azure** (Container Apps, AKS).
+  For the *model* itself you can also go managed: **Amazon Bedrock** /
+  **SageMaker** or **Vertex AI** host Claude behind the same SDK with an
+  `AnthropicBedrock` / `AnthropicVertex` client (IAM instead of an API key) —
+  useful when the rest of the stack already lives in that cloud.
 - **Concurrency** — an async worker pool or a semaphore capping in-flight
   agent runs (each is expensive); a queue with backpressure (429 when full).
 - **Config & secrets** — everything from env / a secrets manager, never in code;
@@ -52,6 +67,10 @@ least one alert. Stage 6 deliverable.
 **Primary (official, stable):**
 - FastAPI docs — *First steps*, *Concurrency and async*, *Server-Sent Events*
   (via `StreamingResponse`): <https://fastapi.tiangolo.com/>.
+- LangServe docs — *`add_routes`*, streaming endpoints, the playground:
+  <https://python.langchain.com/docs/langserve/>.
+- Docker docs — *Python language guide* (`Dockerfile`, multi-stage, non-root):
+  <https://docs.docker.com/language/python/>.
 - Anthropic docs — *Streaming* (SSE event types to relay):
   <https://docs.anthropic.com/en/docs/build-with-claude/streaming>.
 - Google SRE Book — *Monitoring Distributed Systems* (the four golden signals):
@@ -135,6 +154,14 @@ capacity instead of melting.
   queue or get 429; check p95 in the logs.
 - Write `dashboards/README.md`: the ~7 charts to build and the 1 alert to set
   first, with thresholds.
+- Write a `Dockerfile` + `docker-compose.yml` (service + Qdrant + Phoenix).
+  Build the image, run it, hit the stream endpoint from outside the container.
+- (Optional) add LangServe `add_routes` for the raw runnable alongside your
+  custom routes; compare the two.
+- **End-to-End AI Copilot:** the finished `service.py` — RAG + multi-agent +
+  guardrails + evals + tracing + budgets, containerised and streaming — *is*
+  the copilot. Note in `notes.md` what a real deploy would still need (auth,
+  a real queue, autoscaling, a CD pipeline).
 - Tick every box in the Stage 6 `README.md` checklist.
 
 ---

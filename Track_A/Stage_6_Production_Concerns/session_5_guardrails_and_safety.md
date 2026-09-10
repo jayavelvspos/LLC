@@ -41,6 +41,18 @@ refusals.
   check `stop_reason` before reading content; have a safe user-facing message
   and, for Opus/Fable, consider the server-side `fallbacks` parameter.
 - **Defense in depth** — no single guard is enough; layer them.
+- **Guardrail frameworks** package the layers so you don't hand-roll each check.
+  **NeMo Guardrails** (NVIDIA) uses *Colang* to declare **rails**:
+  - *input rails* — screen/transform the user message (jailbreak check, topic
+    filter, PII) before the LLM sees it;
+  - *dialog rails* — constrain the conversation flow / allowed topics;
+  - *retrieval rails* — screen retrieved chunks before they enter the prompt
+    (the RAG-injection defense above, declaratively);
+  - *output rails* — fact-check, moderate, schema-check the response.
+  You still own the hard checks; the framework gives structure, a policy file,
+  and off-the-shelf rails. Build the **Guardrailed, Evaluated Chatbot** example
+  by wrapping `research.py` in a NeMo config and running Session 2's eval
+  through it.
 
 ---
 
@@ -55,6 +67,8 @@ refusals.
 - OWASP — *Top 10 for LLM Applications* (LLM01 Prompt Injection, LLM02 Insecure
   Output Handling, LLM06 Sensitive Info Disclosure):
   <https://owasp.org/www-project-top-10-for-large-language-model-applications/>.
+- NeMo Guardrails docs — *Configuration guide* and *input/output/retrieval
+  rails*: <https://docs.nvidia.com/nemo/guardrails/>.
 
 **Video (pick one, ~15–25 min):**
 - Search *"prompt injection attacks and defenses LLM"*.
@@ -126,6 +140,10 @@ instruction and answered the real question.
   - Put an email + phone in a question → confirm redaction in logs.
   - Trigger a refusal (an obviously disallowed request) → confirm
     `stop_reason` is checked and the safe message is returned.
+- Re-implement two of your hand-rolled guards (input jailbreak screen + a
+  retrieval rail) as **NeMo Guardrails** rails in a config file. Run Session 2's
+  eval both ways — hand-rolled vs NeMo — and compare: same protection? more or
+  less latency? easier to change? That's the **Guardrailed, Evaluated Chatbot**.
 
 ---
 

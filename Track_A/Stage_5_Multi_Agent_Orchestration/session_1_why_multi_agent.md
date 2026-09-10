@@ -36,6 +36,12 @@ and be able to say when that's worth it versus one agent with more tools.
   different models/tools.
 - **Hand-off** = pass a sub-task (and only the context it needs) to a worker,
   get a result back, continue.
+- **Frameworks landscape** (you'll build with LangGraph here; Session 8 tours
+  the rest): **LangGraph** — explicit graph, you own state and control flow;
+  **CrewAI** — declarative roles + tasks, opinionated, fast to stand up;
+  **AutoGen** — conversational agents that message each other;
+  **Agno** — lightweight, performance-focused, model-agnostic. Same ideas
+  (roles, hand-offs, a loop, a reduce step) under different ergonomics.
 
 ---
 

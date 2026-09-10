@@ -27,8 +27,12 @@ structured log per step, and a trace you can open and inspect.
   `event`, `model`, `in_tok`, `out_tok`, `latency_ms`, `error`). Greppable,
   aggregatable. Never `print`.
 - **Trace** — the tree of spans for one request (supervisor → worker → model
-  call), with timing and I/O. LangSmith gives this for LangGraph automatically;
-  OpenTelemetry is the vendor-neutral option.
+  call), with timing and I/O. Options: **LangSmith** (automatic for
+  LangGraph/LCEL — see Stage 5B Session 4), **Arize Phoenix** (open-source,
+  self-hostable, OpenInference/OTel-based, strong on LLM-span analytics and
+  eval-in-the-UI), or plain **OpenTelemetry** (fully vendor-neutral). Phoenix
+  runs locally: `pip install arize-phoenix`, `phoenix.launch_app()`, and
+  auto-instrument with `openinference-instrumentation-langchain`.
 - **Request id** — generated at the entry point, attached to every log line and
   span for that request (via `contextvars` so you don't thread it manually).
 - **What to log per model call:** model, prompt tokens, completion tokens,
@@ -46,6 +50,8 @@ structured log per step, and a trace you can open and inspect.
   <https://www.structlog.org/>.
 - LangSmith docs — *Tracing* concepts and setup:
   <https://docs.smith.langchain.com/>.
+- Arize Phoenix docs — *Quickstart: Tracing* (self-hosted LLM observability):
+  <https://docs.arize.com/phoenix>.
 - OpenTelemetry Python docs — *Getting started* (if going vendor-neutral):
   <https://opentelemetry.io/docs/languages/python/>.
 
@@ -112,7 +118,8 @@ LangSmith trace shows the same as a tree.
 - Add `log_model_call` at every model call site (supervisor + workers).
 - Run 5 questions. Then: pick one `request_id`, reconstruct its timeline from
   logs alone. Compute total cost per request with a one-liner over the JSONL.
-- Turn on LangSmith tracing; open one trace; find the slowest span.
+- Turn on tracing (LangSmith **or** Arize Phoenix — `phoenix.launch_app()` +
+  the LangChain auto-instrumentor); open one trace; find the slowest span.
 - Force an error in a worker → confirm it logs at ERROR with the `request_id`.
 
 ---

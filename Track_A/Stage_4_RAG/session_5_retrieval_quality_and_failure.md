@@ -36,7 +36,12 @@ This is the session designed to send you into Track_B.
      reset account password login credentials") before embedding.
   2. **Metadata filter** — constrain to the relevant source/section/date.
   3. **Raise k + re-rank** — retrieve 20, then score each against the query with
-     a cross-encoder / rerank API, keep top 5.
+     a cross-encoder / rerank API, keep top 5. Hosted rerankers, all the same
+     shape (`query`, `documents` → relevance-scored order):
+     - **Cohere Rerank** — `cohere.Client().rerank(query=..., documents=..., model="rerank-v3.5", top_n=5)`
+     - **Jina Reranker** — `POST https://api.jina.ai/v1/rerank`, model `jina-reranker-v2-base-multilingual`
+     - **Voyage** — `voyageai.Client().rerank(query, docs, model="rerank-2")`
+     - local — a `sentence-transformers` `CrossEncoder("BAAI/bge-reranker-base")`
   4. **Re-chunk** — if the answer never sits cleanly in one chunk.
   5. **Better embedding model** — last resort; re-embeds everything.
 - **Why cosine can mislead:** high-dimensional vectors, dominant "topic"
@@ -50,7 +55,11 @@ This is the session designed to send you into Track_B.
 **Primary (official, stable):**
 - Anthropic — *Contextual Retrieval* (the reranking + contextual-chunk section):
   <https://www.anthropic.com/news/contextual-retrieval>.
-- Voyage AI / Cohere docs — *Rerank* API (`rerank-2` / `rerank-3`):
+- Cohere docs — *Rerank* (`rerank-v3.5`, `top_n`):
+  <https://docs.cohere.com/docs/rerank-overview>.
+- Jina AI docs — *Reranker API* (`jina-reranker-v2`):
+  <https://jina.ai/reranker/>.
+- Voyage AI docs — *Rerank* API (`rerank-2`):
   <https://docs.voyageai.com/docs/reranker>.
 - LangChain docs — *MMR retrieval* and *contextual compression / rerankers*.
 
@@ -80,7 +89,12 @@ proceed to the fixes.
 `code/rerank.py`:
 
 ```python
-# import a rerank client, e.g. voyageai.Client().rerank(query, docs, model="rerank-2")
+import cohere
+_co = cohere.Client()   # or a Jina / Voyage client — same idea
+
+def rerank(question, docs):
+    r = _co.rerank(query=question, documents=docs, model="rerank-v3.5")
+    return [(res.index, res.relevance_score) for res in r.results]
 
 def retrieve_rerank(question, pre_k=20, final_k=5):
     hits = search(question, k=pre_k)                  # session 3

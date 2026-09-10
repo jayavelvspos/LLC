@@ -36,6 +36,16 @@ PDF) in `corpus/`.
   mid-sentence if avoidable. `RecursiveCharacterTextSplitter` does this.
 - **Metadata per chunk:** source filename, section/heading, position, maybe a
   date. You'll filter and cite with it later.
+- **Loading ≠ chunking.** *Loaders* turn a file (PDF, HTML, `.docx`, a URL, a
+  Notion export) into raw `Document` objects with `page_content` + `metadata`;
+  *splitters* then cut those into chunks. LangChain's `langchain_community`
+  loaders (`DirectoryLoader`, `PyPDFLoader`, `WebBaseLoader`,
+  `UnstructuredMarkdownLoader`) save you writing a parser per format — the
+  splitter and everything downstream stays the same.
+- **Token vs character splitting.** `RecursiveCharacterTextSplitter` counts
+  characters by default; `.from_tiktoken_encoder(...)` or
+  `SentenceTransformersTokenTextSplitter` count *tokens*, which is what your
+  embedding model and prompt budget actually care about.
 
 ---
 
@@ -47,6 +57,8 @@ PDF) in `corpus/`.
 - LangChain docs — *Text splitters* (`RecursiveCharacterTextSplitter`,
   token-based splitters):
   <https://python.langchain.com/docs/concepts/text_splitters/>.
+- LangChain docs — *Document loaders* (`DirectoryLoader`, `PyPDFLoader`,
+  `WebBaseLoader`): <https://python.langchain.com/docs/concepts/document_loaders/>.
 
 **Video (pick one, ~10–20 min):**
 - Search *"RAG chunking strategies explained"* — focus on size/overlap effects.
@@ -100,6 +112,26 @@ for c in cs[:2]:
 Note the overlap: the end of chunk 0 ("complete ... in week one") reappears at
 the start of chunk 1.
 
+### Same thing, via LangChain loaders
+
+Once `corpus/` has more than markdown (PDFs, HTML), swap the hand-rolled file
+walk for a loader and split the loaded `Document`s directly — metadata like
+`source` and `page` comes attached:
+
+```python
+from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+docs = DirectoryLoader("corpus", glob="**/*.pdf", loader_cls=PyPDFLoader).load()
+splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+    chunk_size=600, chunk_overlap=100)
+chunks = splitter.split_documents(docs)          # -> list[Document], metadata preserved
+print(len(chunks), chunks[0].metadata)           # {'source': 'corpus/handbook.pdf', 'page': 0}
+```
+
+`split_documents` (not `split_text`) keeps each chunk's `metadata` — you get
+`source` and `page` for free, which is what you'll cite from in Session 4.
+
 ---
 
 ## Build
@@ -111,6 +143,12 @@ the start of chunk 1.
 - Set `overlap=0`, find a fact that sits near a boundary, and show it gets
   split. Restore overlap; show it's whole again.
 - Add a `section` field to metadata by tracking the last seen `## ` heading.
+- Add one non-markdown file to `corpus/` (a PDF or an HTML page). Load it with
+  the matching LangChain loader and confirm `split_documents` carries `source`
+  (and `page` for PDFs) onto every chunk.
+- Re-run with `.from_tiktoken_encoder(chunk_size=600, ...)` and compare the
+  chunk count to the character-based split — same `chunk_size` number, different
+  actual chunk lengths, because tokens ≠ characters.
 
 ---
 

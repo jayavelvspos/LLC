@@ -2,7 +2,10 @@
 
 **Objective:** assemble the guarded supervisor, the three worker sub-agents, and
 parallel retrieval into `research.py` — a tool that turns a question into a
-sourced written brief. Stage 5 deliverable.
+sourced written brief. Stage 5 deliverable, and the reference **Tool-Calling
+Research Agent** example: every worker is an LLM that reaches its result by
+*calling tools* (the Stage 4 retriever, a summarizer, a citation collector),
+not by answering from its own weights.
 
 **Prerequisites:** Sessions 1–5 complete.
 

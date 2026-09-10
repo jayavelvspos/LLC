@@ -4,7 +4,7 @@
 hand that related text lands closer together than unrelated text.
 
 **Prerequisites:** Stage 3 complete. An embeddings API key (Voyage AI, Cohere,
-OpenAI) or `pip install sentence-transformers` for a local model.
+Jina, or OpenAI) or `pip install sentence-transformers` for a local model.
 
 **Method:** run this session with the 8-step loop in
 [`_SESSION_METHOD.md`](_SESSION_METHOD.md).
@@ -36,6 +36,14 @@ OpenAI) or `pip install sentence-transformers` for a local model.
   sense — that's the Track_B footing.
 - Batch your calls (embed many texts per request); cache vectors (they don't
   change).
+- **Provider choice** (all interchangeable at this layer — one model for the
+  whole corpus + queries):
+  | Provider | SDK / call | Notes |
+  |---|---|---|
+  | Voyage AI | `voyageai` — `Client().embed(texts, model="voyage-3")` | Anthropic's recommended default |
+  | Cohere | `cohere` — `Client().embed(texts=..., model="embed-v4.0", input_type="search_document"` / `"search_query")` | note the **`input_type`** split: docs vs queries embed differently |
+  | Jina | `requests.post("https://api.jina.ai/v1/embeddings", ...)` model `jina-embeddings-v3` | task-specific LoRA adapters (`retrieval.passage` / `retrieval.query`) |
+  | local | `sentence-transformers` — `SentenceTransformer("BAAI/bge-small-en-v1.5").encode(texts)` | free, no API key, runs on CPU |
 
 ---
 
@@ -46,6 +54,10 @@ OpenAI) or `pip install sentence-transformers` for a local model.
   <https://docs.voyageai.com/docs/embeddings>.
 - Anthropic docs — *Embeddings* (why there's no first-party endpoint; provider
   guidance): <https://docs.anthropic.com/en/docs/build-with-claude/embeddings>.
+- Cohere docs — *Embed* (`input_type`, `embed-v4.0`):
+  <https://docs.cohere.com/docs/embeddings>.
+- Jina AI docs — *Embeddings API* (`jina-embeddings-v3`, task adapters):
+  <https://jina.ai/embeddings/>.
 - `sentence-transformers` docs (for a free local option):
   <https://www.sbert.net/>.
 
@@ -123,6 +135,10 @@ lean on.
   "I can't log in") → note how stable the top result is.
 - Check whether your provider returns normalized vectors (`np.linalg.norm(v)` ≈
   1?). Note it.
+- **If using Cohere or Jina:** embed the same query once with the *document*
+  role and once with the *query* role (`input_type` / task adapter), then cosine
+  the two. They're close but not identical — asymmetric models tune query vs
+  passage encodings separately. Use the query role for queries.
 
 ---
 
@@ -161,6 +177,9 @@ lean on.
 
 - **Mixing embedding models** — vectors from different models aren't comparable.
   One model for the whole corpus + queries.
+- **Ignoring `input_type` on Cohere/Jina** — embedding queries with the
+  document role (or vice versa) quietly degrades retrieval. Match the role to
+  the text's job.
 - **Not batching** — one API call per text is slow and costly.
 - **Forgetting to normalize** when your similarity code assumes it.
 

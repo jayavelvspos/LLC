@@ -30,7 +30,16 @@ starting point.
   - *Deterministic assertions* — schema valid, cites ≥1 source, ≤ N tokens,
     latency < X, no PII pattern. Cheap, exact.
   - *LLM-as-judge* — score answer quality/faithfulness 0–2 against a rubric.
-    Noisy; average over the set.
+    Noisy; average over the set. Ready-made metric libraries save writing the
+    rubric prompts:
+    - **Ragas** — RAG-specific metrics: `faithfulness`, `answer_relevancy`,
+      `context_precision`, `context_recall`. Takes `question / answer /
+      contexts / ground_truth`, returns 0–1 scores; integrates with a LangSmith
+      or `datasets` eval run.
+    - **TruLens** — *feedback functions* (the "RAG triad": context relevance,
+      groundedness, answer relevance) that attach to traced app runs and log
+      scores over time; good for continuous eval on live-ish traffic, not just
+      a fixed golden set.
   - *Regression* — compare this run's scores to the last committed baseline;
     fail if any metric drops more than a margin.
 - **Thresholds** — the suite passes if aggregate score ≥ T and no hard
@@ -51,6 +60,10 @@ starting point.
 - Anthropic docs — *Reduce hallucinations* / *Strengthen guardrails* eval
   guidance: <https://docs.anthropic.com/en/docs/test-and-evaluate>.
 - `promptfoo` or `pytest` patterns for LLM eval (pick one and stick with it).
+- Ragas docs — *Metrics* (faithfulness, answer relevancy, context
+  precision/recall): <https://docs.ragas.io/>.
+- TruLens docs — *Feedback functions* and the *RAG triad*:
+  <https://www.trulens.org/>.
 
 **Video (pick one, ~15–25 min):**
 - Search *"LLM evaluation CI regression testing"*.
@@ -119,7 +132,10 @@ it before merging.
 
 - Assemble `code/evals/golden.jsonl` (≥30 items across your system's real
   question types; reuse Stage 4's `eval_set.jsonl`).
-- Write the runner with ≥3 deterministic assertions + a rubric judge.
+- Write the runner with ≥3 deterministic assertions + a rubric judge. For the
+  judge, try **Ragas** `faithfulness` + `answer_relevancy` on the RAG answers
+  instead of a hand-written rubric; compare its scores to your own rubric on
+  10 items — where do they disagree, and which do you trust?
 - Commit a `baseline.json`. Add a CI job (GitHub Actions or `make eval`) that
   runs a 10-item fast subset on push, full set on schedule.
 - Make a deliberately bad prompt change → confirm the regression test fails.
