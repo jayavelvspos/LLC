@@ -19,11 +19,11 @@ session loop. Templates live in [`_TEMPLATES/`](_TEMPLATES/):
 - `_TEMPLATES/session_file.md` → copy once per session.
 - `_TEMPLATES/README.md` → checklist for spinning up a new stage.
 
-**Stages 0–6 (incl. 5B) are built out** — each has a folder with `README.md`,
-`_SESSION_METHOD.md`, `notes.md`, and its session files. **1B, 4B, 6B are
-scaffolded** (README + `_SESSION_METHOD.md` + `notes.md` stub; session files
-pending) — added so the roadmap satisfies the target-role goal in
-[`ROLE_GOAL.md`](ROLE_GOAL.md):
+**Stages 0–6, including 1B, 4B, 5B, 6B, are all built out** — each has a
+folder with `README.md`, `_SESSION_METHOD.md`, `notes.md`, and its session
+files. Stage 7 (capstone) is the only stage not yet broken into sessions —
+see its own section below. 1B, 4B, and 6B were added so the roadmap
+satisfies the target-role goal in [`ROLE_GOAL.md`](ROLE_GOAL.md):
 
 | Stage | Folder | Sessions |
 |-------|--------|----------|

@@ -8,18 +8,18 @@ hands-on sessions instead of sitting as reference lists.
 Sits between Stage 4 (RAG) and Stage 5 (multi-agent orchestration). Numbered
 **4B** so Stage 5 onward doesn't have to renumber.
 
-*Session files not yet written — this is the ROADMAP-level skeleton. See
+Six ~45-minute sessions, in order (Session 6 may run long). See
 [`../ROADMAP.md`](../ROADMAP.md) for the full stage description and
-[`../ROLE_GOAL.md`](../ROLE_GOAL.md) for why this stage exists.*
+[`../ROLE_GOAL.md`](../ROLE_GOAL.md) for why this stage exists.
 
 | # | Session | Outcome |
 |---|---------|---------|
-| 1 | Feature engineering & train/test split | a scikit-learn classification or regression baseline on a real small dataset |
-| 2 | Evaluation & error analysis | precision/recall/F1/ROC-AUC, confusion matrix, cross-validation; a written error analysis of the Session 1 model |
-| 3 | Unsupervised learning | clustering on the same or a related dataset; handling class imbalance |
-| 4 | Deep learning fundamentals (PyTorch) | a from-scratch-feel training loop: forward/backward prop, loss, optimizer, epochs/batches, dropout, batch norm |
-| 5 | Hugging Face `transformers` | pretrained pipelines for classification, NER, and summarization on real text |
-| 6 | PEFT fine-tuning (LoRA/QLoRA) | fine-tune a small pretrained model on a narrow task; head-to-head cost/quality/latency comparison vs. the Stage 4 RAG system and vs. plain prompting |
+| 1 | [Feature engineering & train/test split](session_1_feature_engineering_and_train_test_split.md) | a scikit-learn classification baseline on a real small dataset |
+| 2 | [Evaluation & error analysis](session_2_evaluation_and_error_analysis.md) | precision/recall/F1/ROC-AUC, confusion matrix, cross-validation; a written error analysis of the Session 1 model |
+| 3 | [Unsupervised learning & class imbalance](session_3_unsupervised_learning_and_class_imbalance.md) | clustering on the same dataset; two real techniques for handling class imbalance |
+| 4 | [Deep learning fundamentals (PyTorch)](session_4_pytorch_training_loop.md) | an explicit training loop: forward/backward prop, loss, optimizer, epochs/batches, dropout, batch norm |
+| 5 | [Hugging Face `transformers` pipelines](session_5_huggingface_transformers_pipelines.md) | pretrained pipelines for classification, NER, and summarization on real text |
+| 6 | [PEFT fine-tuning (LoRA) vs. RAG & prompting](session_6_peft_lora_finetuning.md) | fine-tune a small pretrained model on a narrow task; head-to-head cost/quality/latency comparison vs. zero-shot prompting, reasoned comparison vs. Stage 4 RAG |
 
 ## Conventions
 

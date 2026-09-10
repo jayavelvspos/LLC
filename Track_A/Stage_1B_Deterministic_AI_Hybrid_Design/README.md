@@ -10,14 +10,14 @@ Sits between Stage 1 (first agent) and Stage 2 (LangGraph basics). Numbered
 **1B** so Stages 2 onward don't have to renumber. Short by design — two
 sessions.
 
-*Session files not yet written — this is the ROADMAP-level skeleton. See
-[`../ROADMAP.md`](../ROADMAP.md) for the full stage description and
-[`../ROLE_GOAL.md`](../ROLE_GOAL.md) for why this stage exists.*
+Two ~45-minute sessions, in order. See [`../ROADMAP.md`](../ROADMAP.md) for
+the full stage description and [`../ROLE_GOAL.md`](../ROLE_GOAL.md) for why
+this stage exists.
 
 | # | Session | Outcome |
 |---|---------|---------|
-| 1 | Rules, regex, heuristics & scoring | catalog of deterministic techniques; decide "deterministic vs. model" for a batch of sample inputs using Stage 0's cost/latency numbers as the yardstick |
-| 2 | Hybrid pipeline design | deterministic pre/post-processing wrapped around an LLM call: validate -> short-circuit -> call model -> validate output |
+| 1 | [Rules, regex, heuristics & scoring](session_1_rules_regex_heuristics_scoring.md) | catalog of deterministic techniques; decide "deterministic vs. model" for a batch of sample inputs using Stage 0's cost/latency numbers as the yardstick |
+| 2 | [Hybrid pipeline design](session_2_hybrid_pipeline_design.md) | deterministic pre/post-processing wrapped around an LLM call: validate -> short-circuit -> call model -> validate output |
 
 ## Conventions
 

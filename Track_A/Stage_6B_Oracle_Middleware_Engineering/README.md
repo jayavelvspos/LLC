@@ -8,17 +8,20 @@ caching, logging).
 Sits between Stage 6 (production concerns) and Stage 7 (capstone). Numbered
 **6B** so Stage 7 doesn't have to renumber.
 
-*Session files not yet written — this is the ROADMAP-level skeleton. See
-[`../ROADMAP.md`](../ROADMAP.md) for the full stage description and
-[`../ROLE_GOAL.md`](../ROLE_GOAL.md) for why this stage exists.*
+Five ~45-minute sessions, in order. All built on one running example: a
+support-ticket schema in Oracle, served through a FastAPI middleware that
+routes each ticket through Stage 1B's deterministic scorer, a Stage 4B
+model, or an LLM fallback. See [`../ROADMAP.md`](../ROADMAP.md) for the full
+stage description and [`../ROLE_GOAL.md`](../ROLE_GOAL.md) for why this
+stage exists.
 
 | # | Session | Outcome |
 |---|---------|---------|
-| 1 | Oracle SQL for AI pipelines | queries, joins, and dataset extraction via `python-oracledb` against a local/test Oracle instance |
-| 2 | Performance-aware querying | indexes, execution plans, pagination; secure handling of sensitive data pulled into a pipeline |
-| 3 | FastAPI middleware architecture | a service layer routing a request through the Stage 1B deterministic path, a Stage 4B model, or a Stage 5/6 agent, backed by Oracle data |
-| 4 | API engineering practices | auth/authz hooks, input validation, retries & timeouts, caching, structured logging, error handling |
-| 5 | Wiring into MLOps/CI | the FastAPI service built, tested, and deployed through the Stage 6 CI/CD pipeline |
+| 1 | [Oracle SQL for AI pipelines](session_1_oracle_sql_for_ai_pipelines.md) | queries, joins, and dataset extraction via `python-oracledb` against a local Oracle instance |
+| 2 | [Performance-aware querying](session_2_performance_aware_querying.md) | indexes, execution plans, pagination; secure handling of sensitive data pulled into a pipeline |
+| 3 | [FastAPI middleware architecture](session_3_fastapi_middleware_architecture.md) | a service layer routing a request through the Stage 1B deterministic path, a Stage 4B model, or an LLM fallback, backed by Oracle data |
+| 4 | [API engineering practices](session_4_api_engineering_practices.md) | auth/authz hooks, input validation, retries & timeouts, caching, structured logging, error handling |
+| 5 | [Wiring into MLOps/CI](session_5_wiring_into_mlops_ci.md) | the FastAPI service containerized, tested without hitting a live LLM, and gated through a lint/test/build CI pipeline |
 
 ## Conventions
 
