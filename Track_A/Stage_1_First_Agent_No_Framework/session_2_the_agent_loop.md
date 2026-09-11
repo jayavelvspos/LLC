@@ -4,6 +4,11 @@
 until the model produces a final answer — with a hard cap so it can't run
 forever.
 
+**What you'll learn:**
+- The agent loop shape: call -> if `tool_use`, run + append, repeat -> else stop
+- Handling multiple `tool_use` blocks in one assistant turn (parallel tools)
+- A max-iteration guard as a termination safety net
+
 **Prerequisites:** Session 1 complete (`single_tool.py` works).
 
 **Method:** run this session with the 8-step loop in

@@ -4,6 +4,12 @@
 and understand the difference between per-thread checkpoint state and a
 cross-thread long-term store.
 
+**What you'll learn:**
+- `SqliteSaver` for a restart-proof checkpointer
+- The difference between thread state (checkpointer) and a long-term store
+- LangGraph's `BaseStore`/`InMemoryStore` for cross-thread facts
+- Why writing to the store is a deliberate act, not automatic
+
 **Prerequisites:** Session 1 complete.
 
 **Method:** run this session with the 8-step loop in

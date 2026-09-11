@@ -4,6 +4,12 @@
 real vector database — **pgvector** or **Qdrant** — with server-side metadata
 filtering, and understand what that buys you and what it costs.
 
+**What you'll learn:**
+- In-process (Chroma/FAISS) vs. server vector DBs, and what a server buys you
+- pgvector: a Postgres extension, `<=>` operator, HNSW index
+- Qdrant: collections/points, native filtering and hybrid search
+- Server-side filtering pushed into the query vs. post-filtering in Python
+
 **Prerequisites:** Session 3 (`store.py`) and Session 4 (`rag.py`) complete.
 Docker installed (both options run in a container).
 

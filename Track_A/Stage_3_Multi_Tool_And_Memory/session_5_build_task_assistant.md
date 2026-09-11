@@ -4,6 +4,12 @@
 into `assistant.py` — a task assistant with a clean
 `chat(thread_id, message) -> str` interface. Stage 3 deliverable.
 
+**What you'll learn:**
+- Assembling a full node order: summarize -> model -> review -> tools -> model
+- A `chat()`/`resume()` interface that surfaces interrupts to the caller
+- Wiring persistence (`SqliteSaver`) and a `user_id`-scoped long-term store
+- Config constants that tie summarization, approval, and recursion limits together
+
 **Prerequisites:** Sessions 1–4 complete.
 
 **Method:** run this session with the 8-step loop in

@@ -6,6 +6,12 @@
 
 **Objective:** <one sentence — what the learner can do / has built by the end.>
 
+**What you'll learn:**
+- <topic 1 — one line, matches a Concepts bullet>
+- <topic 2>
+- <topic 3>
+- <…3-6 total, drawn from this session's Concepts section>
+
 **Prerequisites:** <previous session(s) complete; named artefacts that must exist.>
 
 **Method:** run this session with the 8-step loop in

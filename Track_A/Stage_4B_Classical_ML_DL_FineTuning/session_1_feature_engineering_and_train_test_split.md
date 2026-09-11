@@ -4,6 +4,12 @@
 dataset, with a proper train/test split and feature scaling — the foundation
 every later session in this stage builds on.
 
+**What you'll learn:**
+- Features & labels; supervised learning
+- Train/test splits and `stratify`
+- Feature engineering: scaling, encoding, avoiding data leakage
+- Why a baseline model exists and what has to justify replacing it
+
 **Prerequisites:** Stage 4 complete (RAG). `pip install scikit-learn`.
 
 **Method:** run this session with the 8-step loop in

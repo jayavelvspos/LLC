@@ -5,6 +5,13 @@ recognition, and summarization — on real text using pretrained Hugging Face
 pipelines, and understand what a `pipeline()` call is doing under the hood
 (tokenize -> model -> decode).
 
+**What you'll learn:**
+- What `pipeline()` wraps: tokenize -> model -> decode
+- Pretrained models and the Hugging Face Hub
+- Model choice as a latency/cost/accuracy tradeoff
+- Task-specific output shapes (classification, NER, summarization)
+- Truncation and max input length
+
 **Prerequisites:** Sessions 1-4 complete. `pip install transformers`.
 
 **Method:** run this session with the 8-step loop in

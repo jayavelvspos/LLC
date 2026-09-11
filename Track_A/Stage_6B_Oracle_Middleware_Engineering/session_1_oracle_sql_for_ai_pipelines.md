@@ -5,6 +5,12 @@ support-ticket schema, and pull joined, real data into Python via
 `python-oracledb` — the data source the rest of this stage's middleware
 serves.
 
+**What you'll learn:**
+- Standing up Oracle XE locally via Docker
+- `python-oracledb` "thin mode" connections
+- `SELECT`/`WHERE`/`JOIN` (inner vs. left) and fetching rows as dicts
+- Parameterized queries and why they prevent SQL injection
+
 **Prerequisites:** Stage 6 complete. Docker installed. `pip install
 python-oracledb` (pure-Python "thin mode" — no separate Oracle client
 install needed).

@@ -5,6 +5,13 @@ check, write a test that runs without hitting a live LLM, and wire it
 through a CI pipeline (lint -> test -> build) — the same pipeline shape as
 Stage 6, now covering this service too.
 
+**What you'll learn:**
+- Dockerizing a FastAPI service and `docker-compose` for app + DB together
+- A health check that verifies real dependencies, not just process liveness
+- Testing an API without hitting a live LLM (`TestClient` + `monkeypatch`)
+- A lint -> test -> build CI pipeline, and why each stage gates the next
+- Why deployed images should be versioned, not tagged `:latest`
+
 **Prerequisites:** Sessions 1-4 complete. Docker Compose. `pip install
 pytest`.
 

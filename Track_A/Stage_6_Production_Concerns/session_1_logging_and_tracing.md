@@ -3,6 +3,11 @@
 **Objective:** make every run observable after the fact — a request id, a
 structured log per step, and a trace you can open and inspect.
 
+**What you'll learn:**
+- Structured logs vs. traces, and what a request id ties together
+- What to log per model call, and log levels
+- Tracing options: LangSmith, Arize Phoenix, OpenTelemetry
+
 **Prerequisites:** Stage 5 complete (`research.py`).
 
 **Method:** run this session with the 8-step loop in

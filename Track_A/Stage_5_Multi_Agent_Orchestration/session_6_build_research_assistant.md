@@ -7,6 +7,12 @@ Research Agent** example: every worker is an LLM that reaches its result by
 *calling tools* (the Stage 4 retriever, a summarizer, a citation collector),
 not by answering from its own weights.
 
+**What you'll learn:**
+- Assembling plan -> supervisor loop -> fan-out retrieve -> analyze -> write -> finalize into one graph
+- A clean `research(question, budget_usd) -> {brief, sources, cost, ...}` interface
+- Collecting only the sources actually reflected in the final draft
+- Comparing the orchestrated system against a single-agent RAG baseline to know when it earns its cost
+
 **Prerequisites:** Sessions 1–5 complete.
 
 **Method:** run this session with the 8-step loop in

@@ -5,6 +5,14 @@ call (regex, lookup tables, heuristics, scoring functions), then classify a
 batch of sample inputs into "handle deterministically" vs. "needs the model"
 using Stage 0's cost/latency numbers as the yardstick.
 
+**What you'll learn:**
+- Regex pattern matching for structured extraction/validation
+- Lookup tables and rule tables
+- Heuristics that combine multiple signals
+- Scoring functions and confidence thresholds
+- Stage 0's cost/latency numbers as the deterministic-vs-model yardstick
+- Why a single hard-coded rule is riskier than a scored threshold
+
 **Prerequisites:** Stage 1 complete (the CLI agent with tools). Stage 0
 Session 5 (`costs.py`, cost/latency numbers) — you'll reuse that math here.
 

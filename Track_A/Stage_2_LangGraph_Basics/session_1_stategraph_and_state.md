@@ -3,6 +3,12 @@
 **Objective:** build the smallest possible LangGraph — two nodes in a line —
 and understand what `State` is and how a node updates it.
 
+**What you'll learn:**
+- Nodes as `state -> partial state update` functions, connected by edges
+- `State` as a typed dict every node reads from and writes to
+- `START`/`END` sentinel nodes and `builder.compile()`
+- Why moving control flow into a graph (vs. a hand-rolled loop) helps
+
 **Prerequisites:** Stage 1 complete (you have a working hand-rolled agent).
 
 **Method:** run this session with the 8-step loop in

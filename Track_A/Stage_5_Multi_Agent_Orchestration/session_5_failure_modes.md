@@ -4,6 +4,11 @@
 can't blow past a step or cost budget, and degrades gracefully. Model the
 routing as a state machine to reason about termination.
 
+**What you'll learn:**
+- The multi-agent failure catalogue: oscillation, non-termination, cost blow-up, silent degradation, context bloat
+- Concrete guards: step cap, cost budget, loop detection, per-worker timeout, progress checks
+- Modeling routes as a state machine with `DONE` as an absorbing state
+
 **Prerequisites:** Session 4 complete.
 
 **Method:** run this session with the 8-step loop in

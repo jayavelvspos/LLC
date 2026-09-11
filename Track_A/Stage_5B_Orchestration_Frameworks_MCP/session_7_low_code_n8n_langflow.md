@@ -5,6 +5,11 @@ triggered business pipeline that calls an LLM), skim **Langflow** for visual
 LangChain flows, and be able to say when a visual tool beats code and when it
 doesn't.
 
+**What you'll learn:**
+- n8n nodes and building a scheduled/triggered LLM-calling pipeline
+- Langflow's visual LangChain flows, at a skim level
+- Where a visual tool wins over code, and where code wins
+
 **Prerequisites:** Sessions 1–6 complete. Docker (both tools run locally in a
 container).
 

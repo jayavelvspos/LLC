@@ -4,6 +4,12 @@
 parameterise it with `ChatPromptTemplate`, parse the output into a typed object,
 and run it over many inputs with `.batch` / `.stream`.
 
+**What you'll learn:**
+- LCEL composition with `|` and the `Runnable` interface
+- `ChatPromptTemplate` for parameterized, role-structured prompts
+- Output parsers, including typed/structured output
+- `.batch` and `.stream` on the same chain object
+
 **Prerequisites:** Stage 5 complete. `pip install langchain langchain-anthropic`.
 
 **Method:** run this session with the 8-step loop in

@@ -3,6 +3,12 @@
 **Objective:** replace the fixed hand-off order with a supervisor that decides,
 each step, which worker runs next (or whether the work is done).
 
+**What you'll learn:**
+- The supervisor pattern: a central node deciding the next worker or `DONE`
+- Making the routing decision structured (enum/tool call), not free text
+- Routing as an expected-value decision under uncertainty
+- `Command(goto=..., update=...)` and why a hard step cap still matters
+
 **Prerequisites:** Session 1 complete.
 
 **Method:** run this session with the 8-step loop in

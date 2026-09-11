@@ -3,6 +3,11 @@
 **Objective:** understand the `messages` list, the `system` prompt, and the
 core sampling parameters. Build a short scripted multi-turn conversation.
 
+**What you'll learn:**
+- The `messages` list: alternating roles, and why the model is stateless
+- The `system` prompt vs. a message
+- `max_tokens`, `temperature`, and `stop_sequences`
+
 **Prerequisites:** Session 2 complete (`hello_claude.py` works).
 
 **Method:** run this session with the 7-step loop in

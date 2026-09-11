@@ -5,6 +5,13 @@ real input validation, retries/timeouts on the fallback path, response
 caching, structured logging, and consistent error handling — then prove
 each one works by deliberately triggering its failure case.
 
+**What you'll learn:**
+- Authentication vs. authorization as request-time dependencies
+- Input validation beyond types (Pydantic validators, business rules)
+- Retries with exponential backoff, and why timeouts are still separate
+- Caching with a TTL, and the staleness tradeoff it introduces
+- Structured JSON logging with a `request_id`, and a global exception handler
+
 **Prerequisites:** Session 3 complete (`middleware_app.py`). `pip install
 tenacity`.
 

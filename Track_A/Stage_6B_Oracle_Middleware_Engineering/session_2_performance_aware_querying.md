@@ -4,6 +4,12 @@
 implement server-side pagination instead of fetching everything; and apply
 concrete practices for handling sensitive data safely in a query pipeline.
 
+**What you'll learn:**
+- Indexes and reading an execution plan (`EXPLAIN PLAN`/`DBMS_XPLAN`)
+- When an index doesn't help (or hurts)
+- Server-side pagination (`OFFSET`/`FETCH`) and the N+1 query problem
+- Concrete practices for handling sensitive data in a query pipeline
+
 **Prerequisites:** Session 1 complete (`db.py`, seeded schema).
 
 **Method:** run this session with the 8-step loop in

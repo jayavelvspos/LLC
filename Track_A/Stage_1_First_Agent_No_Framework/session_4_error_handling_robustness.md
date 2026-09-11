@@ -3,6 +3,13 @@
 **Objective:** make the loop survive the real world — tools that raise, bad
 arguments from the model, slow tools — and log every step so you can debug it.
 
+**What you'll learn:**
+- Returning `tool_result` with `is_error: true` instead of crashing
+- Validating tool arguments beyond what the schema catches
+- Timing out a slow tool instead of letting it hang the run
+- The difference between a tool error and an API error (retry vs. report)
+- Structured transcript logging (JSONL) as the seed of observability
+
 **Prerequisites:** Session 3 complete (`tools.py` + multi-tool loop).
 
 **Method:** run this session with the 8-step loop in

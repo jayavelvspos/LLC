@@ -3,6 +3,12 @@
 **Objective:** turn text into vectors with an embeddings API, and confirm by
 hand that related text lands closer together than unrelated text.
 
+**What you'll learn:**
+- What an embedding is: text -> fixed-length vector (black-box view)
+- Cosine similarity and why normalized vectors reduce it to a dot product
+- Batching and caching embedding calls
+- Provider choice (Voyage, Cohere, Jina, local) and the docs-vs-query split
+
 **Prerequisites:** Stage 3 complete. An embeddings API key (Voyage AI, Cohere,
 Jina, or OpenAI) or `pip install sentence-transformers` for a local model.
 

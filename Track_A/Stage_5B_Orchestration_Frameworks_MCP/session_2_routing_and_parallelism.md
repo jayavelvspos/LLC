@@ -5,6 +5,11 @@
 results (`RunnableParallel`) — the two control-flow primitives under every
 supervisor and fan-out.
 
+**What you'll learn:**
+- Routing with `RunnableBranch` and a classifier chain
+- Parallelism with `RunnableParallel` (fan-out then fan-in)
+- `RunnableLambda` for plain-function steps in a chain
+
 **Prerequisites:** Session 1 complete (`lcel_chain.py`).
 
 **Method:** run this session with the 8-step loop in

@@ -3,6 +3,12 @@
 **Objective:** connect retrieval to generation — retrieve top-k chunks, put them
 in the prompt, and get an answer that cites which chunks it used.
 
+**What you'll learn:**
+- The retrieve -> augment -> generate shape
+- Grounding prompt design: numbered context, "answer only from context," citations
+- Prompt-engineered citations vs. Anthropic's Citations feature
+- Why a refusal to answer beats a confident hallucination
+
 **Prerequisites:** Session 3 complete (`store.py`).
 
 **Method:** run this session with the 8-step loop in

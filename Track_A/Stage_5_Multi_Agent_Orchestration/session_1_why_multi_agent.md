@@ -3,6 +3,12 @@
 **Objective:** build two specialized agents where one hands work to the other,
 and be able to say when that's worth it versus one agent with more tools.
 
+**What you'll learn:**
+- What a sub-agent is, and why/when splitting work beats one bigger agent
+- The real costs multi-agent adds (extra calls, failure points, loop risk)
+- Hand-off: passing a sub-task and only the context it needs
+- The multi-agent frameworks landscape (LangGraph, CrewAI, AutoGen, Agno)
+
 **Prerequisites:** Stage 4 complete (you have a RAG agent to reuse as a worker).
 
 **Method:** run this session with the 8-step loop in

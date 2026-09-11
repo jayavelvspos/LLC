@@ -3,6 +3,12 @@
 **Objective:** define a tool, send it to the model, and hand-drive one full
 `tool_use` → `tool_result` → final-answer round trip. No loop yet.
 
+**What you'll learn:**
+- What a tool is: a JSON schema definition plus a function you own
+- Reading a `tool_use` block (`.id`, `.name`, `.input`)
+- Sending a `tool_result` block back as a new `user` message
+- Why the `description` field is prompt engineering, not documentation
+
 **Prerequisites:** Stage 0 complete (you can make a `messages.create` call and
 read `stop_reason`, `usage`, `content`).
 

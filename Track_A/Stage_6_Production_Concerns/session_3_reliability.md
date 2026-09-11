@@ -3,6 +3,12 @@
 **Objective:** make the system survive flaky dependencies — retries with
 backoff, timeouts, fallbacks, circuit breakers, and idempotency keys.
 
+**What you'll learn:**
+- Transient vs. persistent failures
+- Retry with backoff + jitter, and timeouts
+- Fallbacks and circuit breakers
+- Idempotency keys
+
 **Prerequisites:** Session 2 complete.
 
 **Method:** run this session with the 8-step loop in

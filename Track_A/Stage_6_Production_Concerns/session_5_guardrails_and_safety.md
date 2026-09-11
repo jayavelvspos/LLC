@@ -4,6 +4,12 @@
 prompt injection in retrieved content, handle PII, and deal with model
 refusals.
 
+**What you'll learn:**
+- Input validation and output schema enforcement
+- Why retrieved content must be treated as untrusted
+- PII handling and model refusals
+- Defense in depth, and guardrail frameworks (NeMo Guardrails)
+
 **Prerequisites:** Session 4 complete.
 
 **Method:** run this session with the 8-step loop in

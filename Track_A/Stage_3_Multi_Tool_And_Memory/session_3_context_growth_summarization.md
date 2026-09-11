@@ -3,6 +3,12 @@
 **Objective:** stop the message history (and per-turn cost) from growing without
 bound — trim old turns, and replace them with a running summary.
 
+**What you'll learn:**
+- Why every turn resending full history inflates input tokens and latency
+- `trim_messages` for keeping the most recent messages that fit
+- A summarization node: fold old turns into a summary, then `RemoveMessage`
+- The cost trade-off of summarizing now vs. paying for inflated calls later
+
 **Prerequisites:** Session 2 complete. Re-read Stage 0 Session 5 (token cost).
 
 **Method:** run this session with the 8-step loop in

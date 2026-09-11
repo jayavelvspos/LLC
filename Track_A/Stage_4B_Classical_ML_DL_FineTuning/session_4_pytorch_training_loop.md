@@ -5,6 +5,12 @@ from Sessions 1-3, writing the training loop explicitly (forward pass, loss,
 backward pass, optimizer step) so every piece that `.fit()` hid in
 scikit-learn is now visible and named.
 
+**What you'll learn:**
+- Perceptrons, neural networks, and activation functions
+- Forward pass, loss functions, backward pass (autograd), gradient descent
+- Optimizers, epochs/batches, and learning rate
+- Dropout, batch normalization, and vanishing gradients
+
 **Prerequisites:** Sessions 1-3 complete. `pip install torch` (CPU build is
 fine for this dataset's size).
 

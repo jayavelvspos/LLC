@@ -4,6 +4,12 @@
 LangSmith, then save a dataset and run an eval against it so a change's effect is
 a number, not a vibe.
 
+**What you'll learn:**
+- Enabling tracing and reading a run tree
+- Trace vocabulary: run, trace, spans
+- `@traceable`, tags, and metadata
+- Saving a dataset and running an eval against it
+
 **Prerequisites:** Sessions 1–3 complete. A LangSmith account + API key
 (free tier is enough). `pip install langsmith`.
 

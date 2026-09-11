@@ -5,6 +5,13 @@ pulls a ticket from Oracle, then decides — deterministic rule, trained
 model, or LLM call — how to classify it, using the hybrid pattern from
 Stage 1B as an actual live HTTP service.
 
+**What you'll learn:**
+- FastAPI path operations, type-validated path/query parameters
+- Pydantic request/response models and the auto-generated `/docs` schema
+- Dependency injection (`Depends`) for DB connection lifecycle
+- Wiring the deterministic -> model -> LLM routing decision into a real endpoint
+- Sync vs. async route handlers with a blocking DB driver
+
 **Prerequisites:** Sessions 1-2 complete (`db.py`, `query_perf.py`). Stage
 1B's `fast_path_rules.py`. `pip install fastapi uvicorn`.
 

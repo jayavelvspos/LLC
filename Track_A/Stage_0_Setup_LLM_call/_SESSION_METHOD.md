@@ -32,8 +32,9 @@ on paper. Check yourself against that file. Missed one? Copy it into
 habit is worth more than any single new concept.
 
 ### 1 — Orient
-Read this session's **Objective** and its **Done when** checklist. Do not start
-until you can say, in one sentence, what "finished" looks like.
+Read this session's **Objective**, its **What you'll learn** bullet list, and
+its **Done when** checklist. Do not start until you can say, in one sentence,
+what "finished" looks like.
 
 ### 2 — Learn the concept
 Read the session's **Concepts** section, then **one** primary resource from its

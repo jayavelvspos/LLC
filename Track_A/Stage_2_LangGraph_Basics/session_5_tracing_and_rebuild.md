@@ -4,6 +4,12 @@
 (`agent_graph.py`), get a trace of a run, and write down exactly what the
 framework replaced.
 
+**What you'll learn:**
+- Setting up run tracing (LangSmith, or `stream_mode="debug"`)
+- Rebuilding an agent as `MessagesState` + `call_model` + `ToolNode` + `tools_condition`
+- Reusing Stage 1's tool functions unchanged behind the `@tool` decorator
+- What the framework replaces vs. what you still own (tools, system prompt, routing intent)
+
 **Prerequisites:** Sessions 1–4 complete; Stage 1's `agent.py` on hand.
 
 **Method:** run this session with the 8-step loop in

@@ -5,6 +5,13 @@ classification task, then measure — with real numbers, not vibes — how it
 compares to zero-shot prompting a general model on the same task, and where
 it sits relative to Stage 4's RAG approach.
 
+**What you'll learn:**
+- Transfer learning and full fine-tuning vs. PEFT
+- How LoRA works: freezing the base model, low-rank adapter matrices, rank `r`
+- QLoRA, at the name/idea level
+- Choosing between fine-tuning, RAG, and prompting for a given task
+- Measuring cost/quality/latency trade-offs with real numbers
+
 **Prerequisites:** Sessions 1-5 complete. Stage 4 (RAG) complete, for the
 comparison. `pip install peft`.
 

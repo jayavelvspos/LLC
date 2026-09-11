@@ -4,6 +4,12 @@
 fix it with top-k tuning, metadata filters, query rewriting, and re-ranking.
 This is the session designed to send you into Track_B.
 
+**What you'll learn:**
+- A failure taxonomy: missing, buried, off-topic, near-duplicate
+- Query rewriting to expand a terse question before embedding
+- Metadata filtering and raising k + reranking (Cohere/Jina/Voyage/local)
+- When re-chunking is the actual fix
+
 **Prerequisites:** Session 4 complete (`rag.py`).
 
 **Method:** run this session with the 8-step loop in

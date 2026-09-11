@@ -4,6 +4,12 @@
 output across rounds against explicit criteria and stops on **pass** or a
 **budget** — the workhorse pattern for "first draft is never good enough".
 
+**What you'll learn:**
+- The generator/evaluator two-role loop, wired as a LangGraph conditional edge
+- Writing named, checkable criteria instead of vague "make it better"
+- Guaranteeing termination (pass or budget), and why that matters
+- Why the evaluator should ideally not be the same model as the generator
+
 **Prerequisites:** Session 2 complete. Stage 2 (LangGraph basics) and Stage 5
 Session 7 (patterns catalog) helpful.
 

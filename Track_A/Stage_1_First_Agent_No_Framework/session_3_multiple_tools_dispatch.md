@@ -3,6 +3,12 @@
 **Objective:** give the agent 3 tools, route calls through a name→function
 dispatch table, and handle multiple `tool_use` blocks in one turn.
 
+**What you'll learn:**
+- Dispatch tables (`name -> function`) for routing multiple tools
+- Keeping a tool's schema and function in sync
+- Handling parallel `tool_use` blocks in one turn
+- Good tool design: sharp descriptions, flat schemas, short string results
+
 **Prerequisites:** Session 2 complete (`agent_loop.py` runs a one-tool loop).
 
 **Method:** run this session with the 8-step loop in

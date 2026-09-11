@@ -3,6 +3,12 @@
 **Objective:** add the conditional edge that routes model → tools → model → …
 → END. This *is* the Stage 1 `while` loop, expressed as a graph.
 
+**What you'll learn:**
+- `add_conditional_edges` and a router function returning a node name
+- `tools_condition` as the built-in "has tool_calls?" router
+- Closing the loop with `add_edge("tools", "model")`
+- `recursion_limit` as the graph's version of a max-iteration guard
+
 **Prerequisites:** Session 2 complete.
 
 **Method:** run this session with the 8-step loop in

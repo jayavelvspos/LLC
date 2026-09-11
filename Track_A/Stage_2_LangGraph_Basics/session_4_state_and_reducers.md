@@ -3,6 +3,12 @@
 **Objective:** understand how LangGraph merges node updates into state, why
 `messages` needs the `add_messages` reducer, and how to define your own.
 
+**What you'll learn:**
+- Default state merge (overwrite) vs. a reducer (combine)
+- `Annotated[list, reducer]` and how LangGraph calls a reducer to merge
+- What `add_messages` does: append, plus update-by-id
+- How reducers resolve concurrent writes to the same state key
+
 **Prerequisites:** Session 3 complete (a working graph loop).
 
 **Method:** run this session with the 8-step loop in

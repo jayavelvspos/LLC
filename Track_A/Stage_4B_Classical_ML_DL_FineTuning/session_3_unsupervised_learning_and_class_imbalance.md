@@ -5,6 +5,13 @@ the clustering against the labels you *do* have (for learning purposes
 only), and apply a real technique for handling class imbalance instead of
 just diagnosing it (Session 2).
 
+**What you'll learn:**
+- Unsupervised learning and K-Means clustering
+- Why a cluster id isn't a class label
+- Choosing *k* with the elbow method
+- Handling class imbalance with `class_weight` and resampling
+- Where reinforcement learning fits relative to supervised/unsupervised
+
 **Prerequisites:** Sessions 1-2 complete.
 
 **Method:** run this session with the 8-step loop in

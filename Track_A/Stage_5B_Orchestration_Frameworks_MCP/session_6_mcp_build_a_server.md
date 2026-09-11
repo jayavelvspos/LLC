@@ -5,6 +5,12 @@ resource, and a prompt — and wire it to Claude to make a small **MCP-Powered
 Desktop Assistant** that can read files, run whitelisted commands, and keep
 notes.
 
+**What you'll learn:**
+- Building an MCP server with `FastMCP`
+- Tool design over a wire (the Stage 1 tool-schema discipline, now remote)
+- Why safety enforcement is the server's job, not the client's
+- Transports and testing with the MCP Inspector
+
 **Prerequisites:** Session 5 complete (`mcp_client.py`). `pip install "mcp[cli]"`.
 
 **Method:** run this session with the 8-step loop in

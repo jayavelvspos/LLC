@@ -4,6 +4,12 @@
 installed and a `.env` layout ready. No API calls this session — just the ground
 to stand on.
 
+**What you'll learn:**
+- Virtual environments and why they give reproducibility
+- Installing and pinning dependencies (`requirements.txt`)
+- The `.env` / `.env.example` / `.gitignore` secrets layout
+- Verifying an environment is sane before writing real code against it
+
 **Prerequisites:** Python 3.10+ installed (`python --version`), a terminal, and
 an editor.
 

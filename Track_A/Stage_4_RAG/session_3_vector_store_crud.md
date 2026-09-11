@@ -3,6 +3,12 @@
 **Objective:** load embedded chunks into a vector store and run top-k similarity
 queries; add, update, and delete entries.
 
+**What you'll learn:**
+- What a vector store does: nearest-k search over `(id, vector, text, metadata)`
+- Local vs. hosted options (Chroma, FAISS, Pinecone, Weaviate, pgvector)
+- CRUD on a vector store: add, query, delete, upsert
+- Choosing `k`, and metadata filtering to narrow the search space
+
 **Prerequisites:** Session 2 complete (`chunk.py`).
 
 **Method:** run this session with the 8-step loop in

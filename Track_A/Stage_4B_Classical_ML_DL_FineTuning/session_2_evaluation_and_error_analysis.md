@@ -5,6 +5,12 @@ and a confusion matrix for Session 1's baseline, run cross-validation, and
 write a short error analysis naming a specific class of mistake the model
 makes.
 
+**What you'll learn:**
+- Confusion matrix, precision, recall, F1-score, ROC-AUC
+- Why the precision/recall tradeoff is a business decision, not a math one
+- k-fold cross-validation and what it catches that one split misses
+- How to do error analysis on actual misclassified examples
+
 **Prerequisites:** Session 1 complete (`baseline_model.py`).
 
 **Method:** run this session with the 8-step loop in

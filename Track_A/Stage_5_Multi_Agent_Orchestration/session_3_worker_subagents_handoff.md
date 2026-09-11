@@ -3,6 +3,12 @@
 **Objective:** turn the stub workers into real sub-agents (each its own
 graph/loop), and decide deliberately what state is shared vs isolated.
 
+**What you'll learn:**
+- A worker sub-agent as a compiled graph/function added as a node
+- Designing shared vs. isolated state deliberately
+- Reusing the Stage 4 RAG agent as a retriever worker
+- A uniform worker interface contract: `run(subtask, shared_slice) -> update`
+
 **Prerequisites:** Session 2 complete (`supervisor.py`).
 
 **Method:** run this session with the 8-step loop in

@@ -3,6 +3,12 @@
 **Objective:** add a checkpointer so a conversation persists between `invoke`
 calls, keyed by a `thread_id`.
 
+**What you'll learn:**
+- Checkpointed state per thread as LangGraph's model of "memory"
+- `MemorySaver` and compiling with `checkpointer=...`
+- The `thread_id` config and invoking with just the new message
+- `get_state` / `get_state_history` for the current and past checkpoints
+
 **Prerequisites:** Stage 2 complete (`agent_graph.py`).
 
 **Method:** run this session with the 8-step loop in

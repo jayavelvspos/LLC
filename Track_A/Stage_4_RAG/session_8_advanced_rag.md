@@ -5,6 +5,12 @@ HyDE, RAG-fusion), chunk-side techniques (parent-document, contextual chunks),
 and hybrid dense+sparse search — and adopt each **only if the eval number
 moves**. This produces the "Advanced RAG with Reranking" example.
 
+**What you'll learn:**
+- Query-side techniques: multi-query, HyDE, RAG-fusion, decomposition
+- Chunk-side techniques: parent-document, sentence-window, contextual retrieval
+- Hybrid dense+sparse search fused with Reciprocal Rank Fusion
+- Adopting a technique only when it moves your Session 6 eval numbers
+
 **Prerequisites:** Session 6 (`eval_rag.py`, `eval_set.jsonl`) and Session 7
 (a real vector store) complete.
 

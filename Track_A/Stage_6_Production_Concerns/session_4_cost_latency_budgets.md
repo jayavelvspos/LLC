@@ -4,6 +4,12 @@
 caching and batching, and measure p50/p95 latency and $/request from real
 traffic.
 
+**What you'll learn:**
+- Setting a cost/latency budget per route
+- Free wins first: prompt caching, input/output hygiene
+- The Batch API and other volume trade-offs
+- Reading p50/p95 latency percentiles, not just averages
+
 **Prerequisites:** Session 3 complete. Stage 0 Session 5 (cost math).
 
 **Method:** run this session with the 8-step loop in

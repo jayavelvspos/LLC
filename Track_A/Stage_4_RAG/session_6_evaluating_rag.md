@@ -4,6 +4,12 @@
 retrieval hit-rate and answer faithfulness — so "is it better?" stops being a
 guess. This is the Stage 4 deliverable.
 
+**What you'll learn:**
+- Evaluating retrieval and generation as two separate failure surfaces
+- Retrieval metrics: hit-rate@k and MRR
+- Generation metrics: faithfulness, answer correctness, refusal correctness
+- Building an eval set (including unanswerable questions) and an LLM-as-judge
+
 **Prerequisites:** Sessions 1–5 complete.
 
 **Method:** run this session with the 8-step loop in

@@ -3,6 +3,12 @@
 **Objective:** build an eval suite (golden set + regression checks + LLM judge)
 and run it on every change so a quality regression fails the build.
 
+**What you'll learn:**
+- Building a golden set and the three check types it enables
+- LLM-as-judge tooling: Ragas, TruLens
+- Setting thresholds and gating CI on them
+- Why determinism matters for a trustworthy eval suite
+
 **Prerequisites:** Session 1 complete. Stage 4 Session 6 (RAG eval) as a
 starting point.
 

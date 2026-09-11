@@ -3,6 +3,12 @@
 **Objective:** stream a response token-by-token and package it as the Stage 0
 deliverable: a script that takes a prompt and prints a streamed reply.
 
+**What you'll learn:**
+- Why streaming matters: perceived latency (UX) and avoiding HTTP timeouts
+- `client.messages.stream(...)` and `stream.text_stream`
+- Getting the assembled `Message` via `get_final_message()` after the loop
+- Handling CLI-arg vs. interactive prompt input
+
 **Prerequisites:** Session 3 complete.
 
 **Method:** run this session with the 7-step loop in

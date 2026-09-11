@@ -3,6 +3,12 @@
 **Objective:** get an API key, load it safely from `.env`, and make your first
 successful `messages.create` call. Understand every field that comes back.
 
+**What you'll learn:**
+- Creating and safely loading an API key from `.env`
+- `client.messages.create` and its required parameters
+- The response object: `content`, `stop_reason`, `usage`, `id`, `model`
+- Triggering and reading a real API error on purpose
+
 **Prerequisites:** Session 1 complete (venv active, SDK installed, `.env` ready).
 
 **Method:** run this session with the 7-step loop in

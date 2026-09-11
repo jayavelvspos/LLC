@@ -5,6 +5,12 @@ agent as a real fast path, so most requests never reach the model; formalize
 the pattern (validate -> short-circuit -> call model -> validate output) and
 measure the cost/latency actually saved.
 
+**What you'll learn:**
+- The four-stage hybrid pattern: validate -> short-circuit -> call model -> validate output
+- Why the model should be the fallback, not the default
+- Handling borderline/near-miss scores as a signal, not an error
+- Measuring the actual $ and time a fast path saves vs. an all-model baseline
+
 **Prerequisites:** Session 1 complete (`fast_path_rules.py`). Stage 1's CLI
 agent.
 

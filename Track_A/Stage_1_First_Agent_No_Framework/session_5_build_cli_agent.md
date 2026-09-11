@@ -4,6 +4,13 @@
 takes a question, chains tool calls, recovers from failures, logs a transcript,
 and prints a final answer. This is the Stage 1 deliverable.
 
+**What you'll learn:**
+- Structuring an agent into a testable, reusable module layout
+- Config as named constants instead of magic numbers
+- A CLI with a verbose flag and a max-steps override
+- Writing a per-run JSONL transcript
+- Writing a system prompt that tells the agent to admit "I can't answer"
+
 **Prerequisites:** Sessions 1–4 complete.
 
 **Method:** run this session with the 8-step loop in

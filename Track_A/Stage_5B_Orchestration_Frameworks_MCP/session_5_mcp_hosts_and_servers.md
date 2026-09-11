@@ -4,6 +4,12 @@
 an **existing** MCP server, list and call its tools, and bridge those tools into
 a Claude tool-use loop.
 
+**What you'll learn:**
+- What MCP is and its roles: Host, Client, Server
+- MCP Tools, Resources, and Prompts
+- Connecting to an existing MCP server and calling its tools
+- Bridging MCP tools into a Claude tool-use loop
+
 **Prerequisites:** Sessions 1–4 complete. Stage 1 (the agent loop / tool-use
 cycle). `pip install mcp`; `npx` available (the reference servers are Node).
 

@@ -3,6 +3,12 @@
 **Objective:** make one node call the model (with tools bound) and another
 execute the tools it asks for.
 
+**What you'll learn:**
+- `MessagesState` and the `add_messages` reducer
+- `ChatAnthropic` and `bind_tools` for a model that can emit `tool_calls`
+- Writing a model node vs. a tool node (and `ToolNode` from prebuilt)
+- The `@tool` decorator: docstring + type hints become the schema
+
 **Prerequisites:** Session 1 complete (`linear_graph.py`).
 
 **Method:** run this session with the 8-step loop in

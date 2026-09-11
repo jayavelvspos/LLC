@@ -5,6 +5,12 @@
 OpenAI-compatible endpoints; and decide *which* calls in your system (if any)
 should go to a self-hosted model instead of the Anthropic API.
 
+**What you'll learn:**
+- Why (and why not) to self-host inference
+- Ollama for local runs, vLLM as the production serving option
+- OpenAI-compatible endpoints as a drop-in swap
+- Hybrid routing, gated by your eval suite
+
 **Prerequisites:** Sessions 1–6 complete (you have `service.py` and the eval
 suite). Docker; ~8 GB free RAM for a small model.
 

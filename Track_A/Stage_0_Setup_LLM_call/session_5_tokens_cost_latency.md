@@ -4,6 +4,12 @@
 `stream_prompt.py` to report tokens, USD cost, time-to-first-token, and total
 time. This completes Stage 0.
 
+**What you'll learn:**
+- Counting tokens before sending with `count_tokens`
+- The cost formula: tokens x per-token price = dollars
+- Time to first token (TTFT) vs. total time
+- Why output tokens usually dominate the bill
+
 **Prerequisites:** Session 4 complete (`stream_prompt.py` streams and prints
 token counts).
 

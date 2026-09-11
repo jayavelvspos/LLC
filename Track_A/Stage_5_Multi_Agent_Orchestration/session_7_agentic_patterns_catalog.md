@@ -5,6 +5,12 @@ chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer
 (workflows), plus ReAct, reflection, and planning (single-agent) — and be able
 to pick the right one for a task instead of defaulting to "a big agent".
 
+**What you'll learn:**
+- Workflow (fixed control flow) vs. agent (LLM decides) and when to prefer each
+- The five workflow patterns: chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer
+- The single-agent patterns: ReAct, reflection/self-critique, planning
+- Choosing the simplest pattern that fits, and never adding one without a concrete failure it fixes
+
 **Prerequisites:** Sessions 1–2 complete (hand-off, supervisor). This is an
 **extension session** — it pairs naturally right after Session 2; it's numbered
 7 only to avoid renumbering the build.

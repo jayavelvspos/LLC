@@ -3,6 +3,12 @@
 **Objective:** pause the graph before a side-effecting tool runs, surface the
 proposed call to a human, and resume with approve / edit / reject.
 
+**What you'll learn:**
+- Classifying tools as safe-to-autorun vs. needs-approval
+- `interrupt()` inside a node vs. `interrupt_before=["tools"]` at compile
+- Resuming a paused run with `Command(resume=...)`
+- Approve / edit / reject as the three resume outcomes
+
 **Prerequisites:** Session 3 complete. A checkpointer is required for this.
 
 **Method:** run this session with the 8-step loop in

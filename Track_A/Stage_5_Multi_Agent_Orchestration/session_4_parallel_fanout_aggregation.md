@@ -3,6 +3,12 @@
 **Objective:** run several workers concurrently (one per sub-task) and reduce
 their outputs into one result — the map-reduce shape.
 
+**What you'll learn:**
+- When fan-out is safe: independent sub-tasks only
+- `Send(...)` for mapping a supervisor's sub-tasks onto parallel workers
+- Reducing merged results into shared state without a race
+- Why wall-time drops but token cost roughly doesn't, and bounding concurrency
+
 **Prerequisites:** Session 3 complete (`workers.py`).
 
 **Method:** run this session with the 8-step loop in

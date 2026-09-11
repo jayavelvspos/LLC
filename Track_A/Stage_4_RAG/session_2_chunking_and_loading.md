@@ -4,6 +4,12 @@
 metadata, and understand how chunk size and overlap change what retrieval can
 find.
 
+**What you'll learn:**
+- Why chunk size and overlap trade off against each other
+- Splitting on structure first, then size (`RecursiveCharacterTextSplitter`)
+- Metadata per chunk: source, section, position
+- Loaders vs. splitters, and token- vs. character-based splitting
+
 **Prerequisites:** Session 1 complete. Put 5–15 documents (markdown, text, or
 PDF) in `corpus/`.
 

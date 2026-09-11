@@ -31,8 +31,9 @@ from memory, then check yourself. Missed one? Copy it into `notes.md` under
 "revisit".
 
 ### 1 — Orient
-Read this session's **Objective** and **Done when**. Don't start until you can
-say in one sentence what "finished" looks like.
+Read this session's **Objective**, its **What you'll learn** bullet list, and
+**Done when**. Don't start until you can say in one sentence what "finished"
+looks like.
 
 ### 2 — Learn the concept
 Read the **Concepts** section, then **one** primary resource. One. The session

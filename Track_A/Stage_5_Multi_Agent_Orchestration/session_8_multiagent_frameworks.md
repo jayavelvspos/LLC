@@ -5,6 +5,12 @@ researches, writes, and edits a short article — in **CrewAI**, compare it head
 head with the LangGraph supervisor from Sessions 2–3, and skim **AutoGen** and
 **Agno** so you can choose a framework on purpose.
 
+**What you'll learn:**
+- The five things every multi-agent framework must provide (roles, decomposition, hand-off, tools, termination)
+- CrewAI's `Agent`/`Task`/`Crew` and sequential vs. hierarchical process
+- AutoGen's conversational agents and Agno's lightweight model-agnostic approach
+- Why every framework abstraction still needs verbose/telemetry visibility into real prompts
+
 **Prerequisites:** Sessions 1–6 complete (you have the LangGraph version to
 compare against). Extension session — do it after the Stage 5 build.
 

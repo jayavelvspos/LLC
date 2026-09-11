@@ -4,6 +4,12 @@
 concurrency control, config/secrets handling, versioning, dashboards, and at
 least one alert. Stage 6 deliverable.
 
+**What you'll learn:**
+- Streaming HTTP endpoints and packaging with LangServe
+- Concurrency control, config/secrets handling, versioning
+- Where it runs: Docker, AWS/GCP/Azure, Amazon Bedrock
+- Dashboards and setting up at least one real alert
+
 **Prerequisites:** Sessions 1–5 complete.
 
 **Method:** run this session with the 8-step loop in
